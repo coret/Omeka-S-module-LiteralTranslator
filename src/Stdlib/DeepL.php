@@ -4,6 +4,7 @@ namespace LiteralTranslator\Stdlib;
 
 use Laminas\Http\Client;
 use Laminas\Http\Request;
+use Laminas\Http\Response;
 use Laminas\Log\LoggerInterface;
 use LiteralTranslator\Exception\TranslationException;
 
@@ -29,6 +30,16 @@ class DeepL
         'en' => 'EN-GB',
         'pt' => 'PT-PT',
         'zh' => 'ZH-HANS',
+    ];
+
+    /**
+     * DeepL's models like to set the titles of publications in italics and
+     * write that as Markdown: "an editor of the *Winkler Prins*". A metadata
+     * value is plain text, where those asterisks are just asterisks, and no
+     * formatting option turns them off. An instruction does.
+     */
+    const INSTRUCTIONS = [
+        'Output plain text only. Never use Markdown or asterisks for emphasis or titles.',
     ];
 
     /**
@@ -87,6 +98,7 @@ class DeepL
         $body = [
             'text' => [$text],
             'target_lang' => $this->targetCode($target),
+            'custom_instructions' => self::INSTRUCTIONS,
         ];
         // DeepL names source languages without a region. Anything that does
         // not look like such a code is left for DeepL to detect, which beats
@@ -95,29 +107,12 @@ class DeepL
             $body['source_lang'] = strtoupper($source);
         }
 
-        // Keys of the free plan carry this suffix and are only valid on the
-        // free endpoint.
-        $endpoint = ':fx' === substr($this->apiKey, -3) ? self::ENDPOINT_FREE : self::ENDPOINT_PRO;
-
-        $client = $this->httpClient;
-        $client->resetParameters(true);
-        $client->setUri($endpoint);
-        $client->setMethod(Request::METHOD_POST);
-        $client->setOptions(['timeout' => 30]);
-        $client->setHeaders([
-            'Authorization' => 'DeepL-Auth-Key ' . $this->apiKey,
-            'Content-Type' => 'application/json',
-        ]);
-        $client->setRawBody(json_encode($body, JSON_INVALID_UTF8_SUBSTITUTE));
-
-        try {
-            $response = $client->send();
-        } catch (\Exception $e) {
-            $this->logger->err(sprintf('LiteralTranslator: DeepL could not be reached: %s', $e->getMessage()));
-            throw new TranslationException(
-                'DeepL could not be reached. Try again later.', // @translate
-                502
-            );
+        $response = $this->send($body);
+        if (400 === $response->getStatusCode()) {
+            // Instructions are not available for every language pair and
+            // plan. A translation with the odd asterisk beats none at all.
+            unset($body['custom_instructions']);
+            $response = $this->send($body);
         }
 
         $status = $response->getStatusCode();
@@ -150,6 +145,37 @@ class DeepL
             'text' => (string) $translation['text'],
             'detected' => $detected,
         ];
+    }
+
+    /**
+     * @throws TranslationException
+     */
+    protected function send(array $body): Response
+    {
+        // Keys of the free plan carry this suffix and are only valid on the
+        // free endpoint.
+        $endpoint = ':fx' === substr($this->apiKey, -3) ? self::ENDPOINT_FREE : self::ENDPOINT_PRO;
+
+        $client = $this->httpClient;
+        $client->resetParameters(true);
+        $client->setUri($endpoint);
+        $client->setMethod(Request::METHOD_POST);
+        $client->setOptions(['timeout' => 30]);
+        $client->setHeaders([
+            'Authorization' => 'DeepL-Auth-Key ' . $this->apiKey,
+            'Content-Type' => 'application/json',
+        ]);
+        $client->setRawBody(json_encode($body, JSON_INVALID_UTF8_SUBSTITUTE));
+
+        try {
+            return $client->send();
+        } catch (\Exception $e) {
+            $this->logger->err(sprintf('LiteralTranslator: DeepL could not be reached: %s', $e->getMessage()));
+            throw new TranslationException(
+                'DeepL could not be reached. Try again later.', // @translate
+                502
+            );
+        }
     }
 
     protected function exceptionForStatus(int $status): TranslationException

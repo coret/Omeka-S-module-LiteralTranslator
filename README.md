@@ -33,6 +33,10 @@ the translation, fix what needs fixing, and remove it again if it is no use.
 A value without a language is fine: DeepL detects what it is written in. If that turns out to be
 the language you asked for, you are told so and no value is added.
 
+DeepL is asked for plain text. Left to itself it sets the titles of publications in Markdown
+italics — `an editor of the *Winkler Prins*` — and in a metadata value those asterisks are just
+asterisks.
+
 Only values of the data type *Text* (`literal`) get the button. URIs and linked resources have
 nothing to translate, and value annotations are left alone.
 

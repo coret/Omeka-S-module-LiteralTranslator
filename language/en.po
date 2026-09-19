@@ -87,39 +87,39 @@ msgstr "A key is stored. Leave empty to keep it."
 msgid "No key is stored yet."
 msgstr "No key is stored yet."
 
-#: src/Stdlib/DeepL.php:74
+#: src/Stdlib/DeepL.php:85
 msgid "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
 msgstr "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
 
-#: src/Stdlib/DeepL.php:82 src/Stdlib/DeepL.php:144
+#: src/Stdlib/DeepL.php:93 src/Stdlib/DeepL.php:139
 msgid "The text is already in the chosen language."
 msgstr "The text is already in the chosen language."
 
-#: src/Stdlib/DeepL.php:118
+#: src/Stdlib/DeepL.php:175
 msgid "DeepL could not be reached. Try again later."
 msgstr "DeepL could not be reached. Try again later."
 
-#: src/Stdlib/DeepL.php:134
+#: src/Stdlib/DeepL.php:129
 msgid "DeepL returned an answer that could not be read."
 msgstr "DeepL returned an answer that could not be read."
 
-#: src/Stdlib/DeepL.php:161
+#: src/Stdlib/DeepL.php:187
 msgid "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
 msgstr "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
 
-#: src/Stdlib/DeepL.php:166
+#: src/Stdlib/DeepL.php:192
 msgid "The translation quota of the DeepL account is used up."
 msgstr "The translation quota of the DeepL account is used up."
 
-#: src/Stdlib/DeepL.php:172
+#: src/Stdlib/DeepL.php:198
 msgid "DeepL is receiving too many requests. Try again in a moment."
 msgstr "DeepL is receiving too many requests. Try again in a moment."
 
-#: src/Stdlib/DeepL.php:178
+#: src/Stdlib/DeepL.php:204
 msgid "DeepL rejected the request. The language may not be supported."
 msgstr "DeepL rejected the request. The language may not be supported."
 
-#: src/Stdlib/DeepL.php:183
+#: src/Stdlib/DeepL.php:209
 msgid "DeepL could not translate the text. Try again later."
 msgstr "DeepL could not translate the text. Try again later."
 

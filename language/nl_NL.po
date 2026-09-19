@@ -87,39 +87,39 @@ msgstr "Er is een sleutel opgeslagen. Laat leeg om die te behouden."
 msgid "No key is stored yet."
 msgstr "Er is nog geen sleutel opgeslagen."
 
-#: src/Stdlib/DeepL.php:74
+#: src/Stdlib/DeepL.php:85
 msgid "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
 msgstr "Er is geen DeepL API-sleutel ingesteld. Voeg er een toe in de configuratie van de module Literal Translator."
 
-#: src/Stdlib/DeepL.php:82 src/Stdlib/DeepL.php:144
+#: src/Stdlib/DeepL.php:93 src/Stdlib/DeepL.php:139
 msgid "The text is already in the chosen language."
 msgstr "De tekst is al in de gekozen taal."
 
-#: src/Stdlib/DeepL.php:118
+#: src/Stdlib/DeepL.php:175
 msgid "DeepL could not be reached. Try again later."
 msgstr "DeepL is niet bereikbaar. Probeer het later opnieuw."
 
-#: src/Stdlib/DeepL.php:134
+#: src/Stdlib/DeepL.php:129
 msgid "DeepL returned an answer that could not be read."
 msgstr "DeepL gaf een antwoord dat niet gelezen kon worden."
 
-#: src/Stdlib/DeepL.php:161
+#: src/Stdlib/DeepL.php:187
 msgid "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
 msgstr "DeepL accepteert de API-sleutel niet. Controleer de sleutel in de configuratie van de module Literal Translator."
 
-#: src/Stdlib/DeepL.php:166
+#: src/Stdlib/DeepL.php:192
 msgid "The translation quota of the DeepL account is used up."
 msgstr "Het vertaaltegoed van het DeepL-account is op."
 
-#: src/Stdlib/DeepL.php:172
+#: src/Stdlib/DeepL.php:198
 msgid "DeepL is receiving too many requests. Try again in a moment."
 msgstr "DeepL krijgt te veel verzoeken. Probeer het zo meteen opnieuw."
 
-#: src/Stdlib/DeepL.php:178
+#: src/Stdlib/DeepL.php:204
 msgid "DeepL rejected the request. The language may not be supported."
 msgstr "DeepL heeft het verzoek geweigerd. Mogelijk wordt de taal niet ondersteund."
 
-#: src/Stdlib/DeepL.php:183
+#: src/Stdlib/DeepL.php:209
 msgid "DeepL could not translate the text. Try again later."
 msgstr "DeepL kon de tekst niet vertalen. Probeer het later opnieuw."
 
