@@ -1,0 +1,152 @@
+# Translation template for the Omeka S module Literal Translator.
+# Copyright (C) 2026 Bob Coret
+# This file is distributed under the same license as the Literal Translator module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LiteralTranslator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/coret/Omeka-S-module-LiteralTranslator/issues\n"
+"POT-Creation-Date: 2026-09-19 12:00+0200\n"
+"PO-Revision-Date: 2026-09-19 12:00+0200\n"
+"Last-Translator: Bob Coret\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config/module.ini:4
+msgid "Literal Translator"
+msgstr ""
+
+#: config/module.ini:5
+msgid "Adds a translate button to every literal value on the resource form. Pick a target language and the DeepL translation is added as a new value, tagged with that language."
+msgstr ""
+
+#: config/module.config.php:58 view/common/literal-translator-sidebar.phtml:14
+msgid "Translate value"
+msgstr ""
+
+#: config/module.config.php:59
+msgid "Unknown (detected automatically)"
+msgstr ""
+
+#: config/module.config.php:60
+msgid "Translating…"
+msgstr ""
+
+#: config/module.config.php:61 view/common/literal-translator-sidebar.phtml:30
+msgid "Add translation"
+msgstr ""
+
+#: config/module.config.php:62 src/Controller/Admin/IndexController.php:63
+msgid "There is no text to translate."
+msgstr ""
+
+#: config/module.config.php:63
+msgid "There is no other language to translate into."
+msgstr ""
+
+#: config/module.config.php:64
+msgid "The translation failed."
+msgstr ""
+
+#: config/module.config.php:81
+msgid "Dutch"
+msgstr ""
+
+#: config/module.config.php:82
+msgid "English"
+msgstr ""
+
+#: config/module.config.php:83
+msgid "German"
+msgstr ""
+
+#: config/module.config.php:84
+msgid "French"
+msgstr ""
+
+#: src/Form/ConfigForm.php:19
+msgid "DeepL API key"
+msgstr ""
+
+#: src/Form/ConfigForm.php:20
+msgid "The authentication key of your DeepL API account. Keys of the free plan end in \":fx\" and are sent to the free endpoint automatically. Leave empty to keep the current key."
+msgstr ""
+
+#: src/Form/ConfigForm.php:32
+msgid "Remove the stored key"
+msgstr ""
+
+#: Module.php:108
+msgid "A key is stored. Leave empty to keep it."
+msgstr ""
+
+#: Module.php:109
+msgid "No key is stored yet."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:74
+msgid "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:82 src/Stdlib/DeepL.php:144
+msgid "The text is already in the chosen language."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:118
+msgid "DeepL could not be reached. Try again later."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:134
+msgid "DeepL returned an answer that could not be read."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:161
+msgid "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:166
+msgid "The translation quota of the DeepL account is used up."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:172
+msgid "DeepL is receiving too many requests. Try again in a moment."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:178
+msgid "DeepL rejected the request. The language may not be supported."
+msgstr ""
+
+#: src/Stdlib/DeepL.php:183
+msgid "DeepL could not translate the text. Try again later."
+msgstr ""
+
+#: src/Controller/Admin/IndexController.php:41
+msgid "The request must be a POST."
+msgstr ""
+
+#: src/Controller/Admin/IndexController.php:54
+msgid "The form has expired. Save your changes and reload the page."
+msgstr ""
+
+#: src/Controller/Admin/IndexController.php:66
+msgid "This text is too long to translate."
+msgstr ""
+
+#: src/Controller/Admin/IndexController.php:69
+msgid "This target language is not available."
+msgstr ""
+
+#: view/common/literal-translator-sidebar.phtml:16
+msgid "Value"
+msgstr ""
+
+#: view/common/literal-translator-sidebar.phtml:20
+msgid "Source language"
+msgstr ""
+
+#: view/common/literal-translator-sidebar.phtml:24
+msgid "Target language"
+msgstr ""

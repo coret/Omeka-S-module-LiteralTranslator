@@ -1,0 +1,33 @@
+<?php
+/**
+ * The sidebar opened by the translate button of a value. It is filled and
+ * driven by asset/js/literal-translator.js.
+ *
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ */
+$translate = $this->plugin('translate');
+?>
+<div id="literal-translator-sidebar" class="sidebar">
+    <a href="#" class="sidebar-close o-icon-close"><span class="screen-reader-text"><?php echo $translate('Close'); ?></span></a>
+    <div class="sidebar-content">
+        <div class="confirm-main">
+            <h3><?php echo $translate('Translate value'); ?></h3>
+            <div class="literal-translator-field">
+                <span class="literal-translator-label"><?php echo $translate('Value'); ?></span>
+                <div class="literal-translator-text"></div>
+            </div>
+            <div class="literal-translator-field">
+                <span class="literal-translator-label"><?php echo $translate('Source language'); ?></span>
+                <div class="literal-translator-source"></div>
+            </div>
+            <div class="literal-translator-field">
+                <label class="literal-translator-label" for="literal-translator-target"><?php echo $translate('Target language'); ?></label>
+                <select id="literal-translator-target"></select>
+            </div>
+            <p class="literal-translator-error error" role="alert" hidden></p>
+        </div>
+        <div class="confirm-panel">
+            <button type="button" id="literal-translator-add"><?php echo $translate('Add translation'); ?></button>
+        </div>
+    </div>
+</div>

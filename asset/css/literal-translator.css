@@ -1,0 +1,44 @@
+/*
+ * Literal Translator.
+ *
+ * The admin theme gives every class containing "o-icon-" the Font Awesome
+ * font, so the button only has to name its glyph: fa-language.
+ */
+.o-icon-translate:before {
+    content: "\f1ab";
+}
+
+#literal-translator-sidebar .literal-translator-field {
+    margin-bottom: 1rem;
+}
+
+#literal-translator-sidebar .literal-translator-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+#literal-translator-sidebar .literal-translator-text {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, .04);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#literal-translator-sidebar #literal-translator-target {
+    width: 100%;
+}
+
+#literal-translator-sidebar .literal-translator-error[hidden] {
+    display: none;
+}
+
+/* Briefly mark the value a translation was just added as. */
+#properties .value.literal-translator-added .input-body {
+    box-shadow: 0 0 0 2px #a5c9a1;
+    transition: box-shadow .3s;
+}

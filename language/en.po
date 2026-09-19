@@ -1,0 +1,152 @@
+# English (identity) catalogue for the Omeka S module Literal Translator.
+# Copyright (C) 2026 Bob Coret
+# This file is distributed under the same license as the Literal Translator module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LiteralTranslator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/coret/Omeka-S-module-LiteralTranslator/issues\n"
+"POT-Creation-Date: 2026-09-19 12:00+0200\n"
+"PO-Revision-Date: 2026-09-19 12:00+0200\n"
+"Last-Translator: Bob Coret\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config/module.ini:4
+msgid "Literal Translator"
+msgstr "Literal Translator"
+
+#: config/module.ini:5
+msgid "Adds a translate button to every literal value on the resource form. Pick a target language and the DeepL translation is added as a new value, tagged with that language."
+msgstr "Adds a translate button to every literal value on the resource form. Pick a target language and the DeepL translation is added as a new value, tagged with that language."
+
+#: config/module.config.php:58 view/common/literal-translator-sidebar.phtml:14
+msgid "Translate value"
+msgstr "Translate value"
+
+#: config/module.config.php:59
+msgid "Unknown (detected automatically)"
+msgstr "Unknown (detected automatically)"
+
+#: config/module.config.php:60
+msgid "Translating…"
+msgstr "Translating…"
+
+#: config/module.config.php:61 view/common/literal-translator-sidebar.phtml:30
+msgid "Add translation"
+msgstr "Add translation"
+
+#: config/module.config.php:62 src/Controller/Admin/IndexController.php:63
+msgid "There is no text to translate."
+msgstr "There is no text to translate."
+
+#: config/module.config.php:63
+msgid "There is no other language to translate into."
+msgstr "There is no other language to translate into."
+
+#: config/module.config.php:64
+msgid "The translation failed."
+msgstr "The translation failed."
+
+#: config/module.config.php:81
+msgid "Dutch"
+msgstr "Dutch"
+
+#: config/module.config.php:82
+msgid "English"
+msgstr "English"
+
+#: config/module.config.php:83
+msgid "German"
+msgstr "German"
+
+#: config/module.config.php:84
+msgid "French"
+msgstr "French"
+
+#: src/Form/ConfigForm.php:19
+msgid "DeepL API key"
+msgstr "DeepL API key"
+
+#: src/Form/ConfigForm.php:20
+msgid "The authentication key of your DeepL API account. Keys of the free plan end in \":fx\" and are sent to the free endpoint automatically. Leave empty to keep the current key."
+msgstr "The authentication key of your DeepL API account. Keys of the free plan end in \":fx\" and are sent to the free endpoint automatically. Leave empty to keep the current key."
+
+#: src/Form/ConfigForm.php:32
+msgid "Remove the stored key"
+msgstr "Remove the stored key"
+
+#: Module.php:108
+msgid "A key is stored. Leave empty to keep it."
+msgstr "A key is stored. Leave empty to keep it."
+
+#: Module.php:109
+msgid "No key is stored yet."
+msgstr "No key is stored yet."
+
+#: src/Stdlib/DeepL.php:74
+msgid "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
+msgstr "No DeepL API key is configured. Add one in the configuration of the Literal Translator module."
+
+#: src/Stdlib/DeepL.php:82 src/Stdlib/DeepL.php:144
+msgid "The text is already in the chosen language."
+msgstr "The text is already in the chosen language."
+
+#: src/Stdlib/DeepL.php:118
+msgid "DeepL could not be reached. Try again later."
+msgstr "DeepL could not be reached. Try again later."
+
+#: src/Stdlib/DeepL.php:134
+msgid "DeepL returned an answer that could not be read."
+msgstr "DeepL returned an answer that could not be read."
+
+#: src/Stdlib/DeepL.php:161
+msgid "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
+msgstr "DeepL did not accept the API key. Check it in the configuration of the Literal Translator module."
+
+#: src/Stdlib/DeepL.php:166
+msgid "The translation quota of the DeepL account is used up."
+msgstr "The translation quota of the DeepL account is used up."
+
+#: src/Stdlib/DeepL.php:172
+msgid "DeepL is receiving too many requests. Try again in a moment."
+msgstr "DeepL is receiving too many requests. Try again in a moment."
+
+#: src/Stdlib/DeepL.php:178
+msgid "DeepL rejected the request. The language may not be supported."
+msgstr "DeepL rejected the request. The language may not be supported."
+
+#: src/Stdlib/DeepL.php:183
+msgid "DeepL could not translate the text. Try again later."
+msgstr "DeepL could not translate the text. Try again later."
+
+#: src/Controller/Admin/IndexController.php:41
+msgid "The request must be a POST."
+msgstr "The request must be a POST."
+
+#: src/Controller/Admin/IndexController.php:54
+msgid "The form has expired. Save your changes and reload the page."
+msgstr "The form has expired. Save your changes and reload the page."
+
+#: src/Controller/Admin/IndexController.php:66
+msgid "This text is too long to translate."
+msgstr "This text is too long to translate."
+
+#: src/Controller/Admin/IndexController.php:69
+msgid "This target language is not available."
+msgstr "This target language is not available."
+
+#: view/common/literal-translator-sidebar.phtml:16
+msgid "Value"
+msgstr "Value"
+
+#: view/common/literal-translator-sidebar.phtml:20
+msgid "Source language"
+msgstr "Source language"
+
+#: view/common/literal-translator-sidebar.phtml:24
+msgid "Target language"
+msgstr "Target language"

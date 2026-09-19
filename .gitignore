@@ -1,0 +1,8 @@
+.php-cs-fixer.cache
+
+# Only needed for development (php-cs-fixer); the module has no runtime
+# dependencies.
+/vendor/
+
+# Release output, deliberately not published.
+/dist/
