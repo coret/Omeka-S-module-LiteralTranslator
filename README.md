@@ -4,6 +4,8 @@ Omeka S module adding a **translate button** to every literal value on the resou
 target language, and the [DeepL](https://www.deepl.com/) translation is added as a new value of
 the same property, tagged with that language.
 
+![Literal Translator demo](LiteralTranslatorDemo.gif)
+
 ## Why
 
 Multilingual metadata in Omeka S is a matter of repeating a value once per language, each with its
